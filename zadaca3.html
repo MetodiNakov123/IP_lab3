@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca3</title>
+
+    <script>
+
+        function Cilindar (radius, visina){
+            this.radius = radius;
+            this.visina = visina;
+        }
+
+        Cilindar.prototype.volumen = function () {
+            return "Volumenot iznesuva: " + 3.14 * this.radius * this.radius * this.visina;
+        }
+
+        let cilindar = new Cilindar(2,5);
+        console.log(cilindar.volumen());
+        document.write(cilindar.volumen());
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

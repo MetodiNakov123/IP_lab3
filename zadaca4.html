@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca4</title>
+
+    <script>
+        let books = [];
+
+        function Book (title,author,alreadyRead){
+            this.title = title;
+            this.author = author;
+            this.alreadyRead = alreadyRead;
+        }
+
+        Book.prototype.print = function() {
+
+            if (this.alreadyRead == true){
+                document.write("You already read " + this.title + " by " + this.author + "<br/>");
+                console.log("You already read " + this.title + " by " + this.author + "<br/>");
+            }
+            else{
+                document.write("You still need to read " + this.title + " by " + this.author + "<br/>");
+                console.log("You still need to read " + this.title + " by " + this.author + "<br/>");
+            }
+        }
+
+        let book1 = new Book("The Hobbit", "J.R.R. Tolkien", true);
+        let book2 = new Book("War and Peace", "L. Tolstoy", true);
+        let book3 = new Book("Song of Solomon", "Toni Morrison", true);
+        let book4 = new Book("Ulysses", "James Joyce", false);
+        let book5 = new Book("The Shadow of the Wind", "Carlos Ruiz Zafon", false);
+
+        books.push(book1,book2,book3,book4,book5);
+
+
+        for (let book of books){
+            book.print();
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

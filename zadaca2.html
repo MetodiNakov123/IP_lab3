@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca2</title>
+
+    <script>
+
+       function remove_array_element(niza,element){
+            if (niza == null){
+                return void 0;
+            }
+
+            if (element == null || niza.indexOf(element) == -1){
+                return niza;
+            }
+
+
+
+            for(let i=0; i<niza.length; i++){
+                if (niza.indexOf(element) == -1){
+                    break;
+                }
+                niza.splice(niza.indexOf(element),1);
+            }
+
+            // let index = niza.indexOf(element);
+            // let podnizaLevo = niza.slice(0,index);
+            // let podnizaDesno = niza.slice(index+1);
+            // let array = podnizaLevo.concat(podnizaDesno);
+
+           // niza.splice(index,1);
+
+           return niza;
+       }
+
+       lista = remove_array_element([2,5,5,9,6], 5);
+       document.write(lista.toString());
+
+       console.log(remove_array_element([2,5,9,6], 5));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
